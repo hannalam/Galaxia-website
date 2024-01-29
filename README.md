@@ -2,11 +2,13 @@
 
 #### This is the demo presentation 
 
-![Screenshot 1](https://github.com/hannalam/Galaxia-website/assets/63362052/3b9f0bae-734c-42f7-8ba9-6a977f6ad107)
+![Screenshot 1](https://github.com/hannalam/Galaxia-website/assets/63362052/dfe1a7fe-eaef-4997-9089-404c45b4b156)
 
-![Screenshot 2](https://github.com/hannalam/Galaxia-website/assets/63362052/794b1ea3-1587-4c3f-a389-a3ca40150c10)
+![Screenshot 2](https://github.com/hannalam/Galaxia-website/assets/63362052/fbf45209-50de-4b4c-916f-53c59f3c3d1f)
 
-![Screenshot 3](https://github.com/hannalam/Galaxia-website/assets/63362052/dbe6c526-2a8b-4761-ac57-5b7cd83d56de)
+![Screenshot 3](https://github.com/hannalam/Galaxia-website/assets/63362052/99bea74a-1c66-4776-88a4-9f4779d38c26)
+
+
 
 ### The internal website render from coursera
 https://hub.coursera-apps.org:443/connect/sharedbplqfkwt?forceRefresh=false&path=%2F
