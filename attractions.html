@@ -1,0 +1,205 @@
+<!-- 
+University of London
+Web Development (CM1040)
+
+Project Name: GALAXIA
+Team 77 (Tutor Group 09)
+Members: 
+SAU TING LAM (Slack: Hanna Lam) 
+ALEKSANDRA WYPORKIEWICZ (Slack: Aleksandra Wyporkiewicz)
+ABDULLAH SALEEM (Slack: Abdullah S) 
+YOUNHO KIM (Slack: Lewis Kim)
+YEHUDA TAYLOR (Slack: Yehuda T)
+ABDULLAH ANAZ (Slack: Abdullah Anaz)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- This head section contains all the invisible information about the page -->
+<head>
+  <link rel="shortcut icon" href="img/favicon.ico"/> <!--Original Logo designed -->
+  <title>GALAXIA | Attractions</title>
+  
+  <meta charset="utf-8">
+  <meta name="description" content="This is a theme park website for a community of people interested in explore the space and planets.">
+  <meta name="author" content="Team 77">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="refresh" content="600">
+  <meta name="keywords" content="Theme park -'SPACE FOR YOU'">
+  
+  <!-- import CSS -->  
+  <link rel="stylesheet" type="text/css" href="StyleSheet/style.css"/>
+
+  <!-- import font -->
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <!-- import fontawesome -->
+  <script src="https://use.fontawesome.com/2c01877642.js"></script>    
+  <!-- import jQuery -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+
+<!-- This body section contains the structure for all the visble content -->
+<body>
+    <div class="grid-container-attractions">
+        <!-- Header contains logo -->
+        <header id="logo" class="top-bar">
+            <a href="index.html"><img src="img/logo.png" alt="Galaxia space park logo" width="100%"></a>
+        </header>
+        <!-- Navigation menu in the top bar -->
+        <nav id="menu" class="top-bar">
+            <a href="index.html" class="home">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="restaurants.html">Restaurants</a>
+        </nav>
+        <!-- Icons for cart, search, user login -->
+        <section id="user-icons" class="top-bar">
+            <img src="img/userIcons/cart.png" alt="Book ticket" width="40" height="40" onclick="alert('Cart\nComing Soon')"/>
+            <img src="img/userIcons/search.png" alt="Search" width="40" height="40" onclick="alert('Search\nComing Soon')"/>                
+            <img src="img/userIcons/user.png" alt="Login" width="40" height="40" onclick="alert('Login\nComing Soon')"/>                
+        </section>
+        <section id="gallery">
+            <!-- Gallery of 4 small images on the left. With the JavaScript code, we can change photo by clicking the small thumbnail photos. Learned from the course "Responsive Website Basics: Code with HTML, CSS, and JavaScript" from Coursera. Made some modify of the size, images and class. -->
+            <div class="gallery-content">
+                <img class="crop-img" src="img/attractions/space-ride.jpg" alt="Space Ride"/>
+                <img class="crop-img" src="img/attractions/educational-tour.jpg" alt="Educational Tour Ride"/>
+                <img class="crop-img" src="img/attractions/black-hole-travel.jpg" alt="Black Hole Travel"/>
+                <img class="crop-img" src="img/attractions/rocket-ride.jpg" alt="Rocket Ride"/>
+            </div>
+        </section>
+        <!-- Big main picture -->
+        <section id="big-image">
+            <img src="img/attractions/space-ride.jpg" alt="Attraction 1"/>
+        </section>
+        <script>
+            //when we click on the thumbnail, we set the src attribute of the big image to be the same as the src of the image we have clicked on(this)
+            $(".crop-img").click(function(){
+                $("#big-image img").attr('src',$(this).attr('src'));
+            });
+        </script>
+        <!-- Content below the gallery pictures - Attractions header  -->
+        <section id="welcome-attractions">
+            <h1>Galaxia Theme Park offers the best cosmic adventures</h1>
+            <p>Choose from many rides, 3D cinema, planetarium and more!</p>
+        </section>
+        <!-- Content below the gallery pictures - Attractions grid  -->
+        <!-- First row  -->
+        <section id="attractions-row1" class="attractions-row">
+            <a href="img/attractions/square-space-ride.jpg" class="attraction">
+                <h3>Space Ride</h3>
+                <img src="img/attractions/square-space-ride.jpg" alt="Space Ride">
+            </a>
+            <a href="img/attractions/square-educational-tour.jpg" class="attraction">
+                <h3>Educational Tour</h3>
+                <img src="img/attractions/square-educational-tour.jpg" alt="Educational Tour Ride">
+            </a>
+            <a href="img/attractions/square-black-hole-travel.jpg" class="attraction">
+                <h3>Black Hole Travel</h3>
+                <img src="img/attractions/square-black-hole-travel.jpg" alt="Black Hole Travel">
+            </a>
+            <a href="img/attractions/square-rocket-ride.jpg" class="attraction">
+                <h3>Rocket Ride</h3>
+                <img src="img/attractions/square-rocket-ride.jpg" alt="Rocket Ride">
+            </a>
+        </section>
+        <!-- Second row  -->
+        <section id="attractions-row2" class="attractions-row">
+            <a href="img/attractions/square-discovery.jpg" class="attraction">
+                <h3>Discovery Rollercoaster</h3>
+                <img src="img/attractions/square-discovery.jpg" alt="Discovery Rollercoaster">
+            </a>
+            <a href="img/attractions/square-expo-center.jpg" class="attraction">
+                <h3>Expo Center</h3>
+                <img src="img/attractions/square-expo-center.jpg" alt="Expo Center">
+            </a>
+            <a href="img/attractions/square-mission-space.jpg" class="attraction">
+                <h3>Mission Space</h3>
+                <img src="img/attractions/square-mission-space.jpg" alt="Mission Space">
+            </a>
+            <a href="img/attractions/square-orbiter.jpg" class="attraction">
+                <h3>The Orbiter</h3>
+                <img src="img/attractions/square-orbiter.jpg" alt="Orbiter Ride">
+            </a>
+        </section>
+        <!-- Third row  -->
+        <section id="attractions-row3" class="attractions-row">
+            <a href="img/attractions/square-planetarium.jpg" class="attraction">
+                <h3>Planetarium</h3>
+                <img src="img/attractions/square-planetarium.jpg" alt="Planetarium">
+            </a>
+            <a href="img/attractions/square-space-fantasy.jpg" class="attraction">
+                <h3>Space Fantasy</h3>
+                <img src="img/attractions/square-space-fantasy.jpg" alt="Space Fantasy">
+            </a>
+            <a href="img/attractions/square-space-mountain.jpg" class="attraction">
+                <h3>Space Mountain Hike</h3>
+                <img src="img/attractions/square-space-mountain.jpg" alt="Space Mountain Hike">
+            </a>
+            <a href="img/attractions/square-space-train.jpg" class="attraction">
+                <h3>Train to the Galaxy</h3>
+                <img src="img/attractions/square-space-train.jpg" alt="Train to the Galaxy">
+            </a>
+        </section>
+        <!-- Fourth row  -->
+        <section id="attractions-row4" class="attractions-row">
+            <a href="img/attractions/square-stars-ferris-wheel.jpg" class="attraction">
+                <h3>Stars Wheel</h3>
+                <img src="img/attractions/square-stars-ferris-wheel.jpg" alt="Stars Wheel">
+            </a>
+            <a href="img/attractions/square-gravity-rollercoaster.jpg" class="attraction">
+                <h3>Gravity Rollercoaster</h3>
+                <img src="img/attractions/square-gravity-rollercoaster.jpg" alt="Gravity Rollecoaster">
+            </a>
+            <a href="img/attractions/square-3d-cinema.jpg" class="attraction">
+                <h3>3D Cinema</h3>
+                <img src="img/attractions/square-3d-cinema.jpg" alt="3D Cinema">
+            </a>
+            <a href="img/attractions/square-weightlessnes-cabin.jpg" class="attraction">
+                <h3>Weightlessnes Cabin</h3>
+                <img src="img/attractions/square-weightlessnes-cabin.jpg" alt="Weightlessnes Cabin">
+            </a>
+        </section>        
+
+        <!-- Footer: provide more extra information of the park and contact -->
+        <footer id="footer">
+            <!-- First column: logo and social media links -->
+            <div id="footer1">
+                <a href="index.html"><img src="img/logo.png" alt="Galaxia space park logo" width="80%"></a>
+                <div id="social-media">
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>                    
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> 
+                </div>
+            </div>
+            <!-- Second column: adress and copyrights -->
+            <div id="footer2">
+                <address id="address">
+                    <p>Galaxia Theme Park Ltd</p>
+                    <p>Space Street 11</p>
+                    <p>Fantasy City</p>
+                    <p>Asteria</p>
+                </address>
+                <div class="copyright">© Space Park 2021 Team 77 (Tutor Group 09)</div>
+            </div>
+            <!-- Third column: adress and copyrights -->
+            <div id="footer3">
+                <p>Contact us if you have any questions</p>
+                <p><a href="tel:+180 123 234 568"><i class="fa fa-phone" aria-hidden="true"></i> +180 123 234 568</a></p>
+                <p><a href="mailto:gobeyond@galaxia.com"><i class="fa fa-envelope" aria-hidden="true"></i> gobeyond@galaxia.com</a></p>
+            </div>            
+            <!-- Fourth column: Sitemap -->
+            <nav id="footer4">                
+                <p><a href="index.html">Homepage</a></p>
+                <p><a href="attractions.html">Attractions</a></p>
+                <p><a href="restaurants.html">Restaurants</a></p>
+                <p><a href="#">Tickets and Passes</a></p>                              
+                <p><a href="#">Regulations</a></p>                                            
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

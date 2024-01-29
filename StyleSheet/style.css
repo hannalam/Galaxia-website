@@ -1,0 +1,496 @@
+/*Common CSS-------------------------------------*/
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: white;
+    height: 100%;
+    font-family: 'ABeeZee', 'Arial';
+    width: 1200px;
+    max-width: 98%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 3px;
+    margin: auto;    
+}
+
+h1 {
+    font-family: 'ABeeZee', 'Arial';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 2em;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+
+h2 {
+    color: rgb(23, 42, 125);
+    margin-top: 0px;
+}
+
+h3 {
+    color: rgb(23, 42, 125);
+    margin-top: 0px;
+}
+
+/*Top Bar CSS---------------------------------------*/
+
+.top-bar {
+    padding: 12px;
+    background: rgb(118, 75, 162);
+    margin-bottom: 10px;
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width:100%;
+    box-sizing: border-box;
+    border-radius: 0px;
+} 
+
+#menu a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 6px 12px;
+    margin-left: 6px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: rgb(23, 42, 125);
+    transition: 1s linear;
+}
+
+#menu a:hover {
+    background: rgb(254, 166, 19);
+    border-radius:10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s linear;
+}
+
+.logo {
+    padding: 10px;
+}
+
+#user-icons img {
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+
+#user-icons img:hover {
+    transform: scale(1.15);
+    transition: 0.5s linear;
+}
+
+.alert {
+  padding: 3px 3px 3px 3px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  text-align: center;
+  background-color: #f44336;
+  color: white;
+}
+
+.close {
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.close:hover {
+  color: black;
+}
+
+/*Index.html CSS--------------------------------------*/
+
+#logo { grid-area: logo; }
+#menu { grid-area: menu; }
+#user-icons { grid-area: icons; }
+.alert { grid-area: alert; }
+#gallery { grid-area: gallery; }
+#welcome { grid-area: welcome; }
+#big-image { grid-area: bigImage; }
+#content-boxes { grid-area: content-boxes; }
+#reviews-header {grid-area: reviews-header; }
+#reviews { grid-area: reviews; }
+
+.grid-container-index {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+      'logo menu menu icons'
+      'alert alert alert alert'
+      'gallery bigImage bigImage bigImage'
+      'welcome welcome welcome welcome'
+      'content-boxes content-boxes content-boxes content-boxes'
+      'reviews-header reviews-header reviews-header reviews-header'
+      'reviews reviews reviews reviews'
+      'footer footer footer footer';
+}
+
+/*Index/Restaurant CSS - top gallery section------------------------------------*/
+
+#gallery {
+    padding-right: 16px;
+    position: relative;
+    margin-bottom: 10px;
+    align-self: stretch;
+}
+
+.gallery-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 10px);
+    height: 100%;
+}
+
+.crop-img {    
+    width: 100%;
+    height: calc(25% - 6px);
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: block;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.crop-img:hover {
+    opacity: 0.7; 
+    transform: scale(1.02); 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+    transition: 1s ease;
+}
+
+.crop-img:last-child {
+    margin-bottom: 0;
+}
+
+#big-image{
+    margin-bottom: 10px;
+}
+#big-image img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+/* Index/Restaurant CSS - content below slider section ------------------------------------*/
+
+#welcome {
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    background-color: rgb(118, 75, 162);
+    margin-bottom: 10px;
+    color: white;
+}
+
+.content-image1 { grid-area: content-image1; }
+.content-description1 { grid-area: content-description1; }
+.content-image2 { grid-area: content-image2; }
+.content-description2 { grid-area: content-description2; }
+.content-description3 { grid-area: content-description3; }
+
+#content-boxes {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+    'content-image1 content-description1 content-description1'
+    'content-description2 content-description2 content-image2'
+    'content-image3 content-description3 content-description3';
+    grid-row-gap: 15px;
+}
+
+#content-boxes > *  {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+}
+
+#content-boxes img {
+    width: calc(100% - 30px);
+    height: auto;
+}
+
+.read-more, 
+.book-now {
+    padding: 6px 12px;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: rgb(23, 42, 125);
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.7s linear;
+}
+
+.container{
+    margin-bottom: 20px;
+}
+
+.read-more:hover, 
+.book-now:hover {
+    background: rgb(254, 166, 19);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s linear;
+}
+
+#reviews-header { grid-area: reviews-header; }
+#review-image1 { grid-area: review-image1}
+#review-image2 { grid-area: review-image2}
+#review-image3 { grid-area: review-image3}
+#review-description1 { grid-area: review-description1; }
+#review-description2 { grid-area: review-description2; }
+#review-description3 { grid-area: review-description3; }
+
+#reviews {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+    'reviews-header reviews-header reviews-header'
+    'review-image1 review-image2 review-image3'
+    'review-description1 review-description2 review-description3';
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#reviews-header {
+    background-color:  rgb(118, 75, 162);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+#review-image1, #review-image2, #review-image3 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Attractions CSS------------------------------------*/
+
+#logo { grid-area: logo; }
+#menu { grid-area: menu; }
+#user-icons { grid-area: icons; }
+#gallery { grid-area: gallery; }
+#big-image { grid-area: bigImage; }
+#welcome-attractions { grid-area: welcome-attractions; }
+#attractions-row1 { grid-area: attractions-row1; }
+#attractions-row2 { grid-area: attractions-row2; }
+#attractions-row3 { grid-area: attractions-row3; }
+#attractions-row4 { grid-area: attractions-row4; }
+
+.grid-container-attractions {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+      'logo menu menu icons'
+      'gallery bigImage bigImage bigImage'
+      'welcome-attractions welcome-attractions welcome-attractions welcome-attractions'
+      'attractions-row1 attractions-row1 attractions-row1 attractions-row1'
+      'attractions-row2 attractions-row2 attractions-row2 attractions-row2'
+      'attractions-row3 attractions-row3 attractions-row3 attractions-row3'
+      'attractions-row4 attractions-row4 attractions-row4 attractions-row4'
+      'footer footer footer footer';
+}
+
+#welcome-attractions {
+    text-align: center;
+    background-color: rgb(118, 75, 162);
+    color: white;
+    margin-bottom: 15px;
+}
+
+.attraction {
+    position: relative;    
+    display: block;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.attraction img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    transition: transform .5s;
+}
+
+.attraction:hover img {
+    transform: scale(1.3);
+}
+
+.attraction h3 {
+    position: absolute;
+    color: rgb(254, 166, 19);
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(23, 42, 125, 0.8);
+    margin: 0px;
+    padding: 15px 0px 15px 15px;    
+}
+
+.attractions-row {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 15px;
+}
+
+/*Restaurants CSS------------------------------------*/
+#logo { grid-area: logo; }
+#menu { grid-area: menu; }
+#user-icons { grid-area: icons; }
+#gallery { grid-area: gallery; }
+#welcome { grid-area: welcome; }
+#big-image { grid-area: bigImage; }
+#restaurants-description { grid-area: restaurants-description; }
+#reviews-header {grid-area: reviews-header; }
+#reviews { grid-area: reviews; }
+#carouselExampleIndicators { grid-area: carouselExampleIndicators;}
+
+.grid-container-restaurant {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas:
+      'logo menu menu icons'
+      'gallery bigImage bigImage bigImage'
+      'welcome welcome welcome welcome'
+      'carouselExampleIndicators carouselExampleIndicators carouselExampleIndicators carouselExampleIndicators'
+      'restaurants-description restaurants-description restaurants-description restaurants-description'
+      'reviews-header reviews-header reviews-header reviews-header'
+      'reviews reviews reviews reviews'
+      'footer footer footer footer';
+}
+
+#restaurants-description > *  {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/*Footer CSS-------------------------------------------*/
+
+footer { grid-area: footer; }
+
+#footer1 { grid-area: footer1; }
+#footer2 { grid-area: footer2; }
+#footer3 { grid-area: footer3; }
+#footer4 { grid-area: footer4; }
+
+#footer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: 'footer1 footer2 footer3 footer4';
+    background-color: rgb(118, 75, 162);
+    padding: 20px 20px;
+    text-align: left;
+    font-size: 12px;
+    color: white;  
+}
+
+#footer1 > a:first-child{
+    display: block;
+    margin-bottom: 10px;
+}
+
+#social-media a {
+    text-decoration:none;
+    display:inline-block;
+    background: rgb(140, 100, 190);
+    transition: 1s linear;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-right: 5px;
+}
+#social-media a i{
+    width:30px;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+}
+    
+#social-media a:hover{
+    background: rgb(95, 55, 145);
+    border-radius:50%;
+    transition: 1s linear;
+}
+
+.fa-instagram {
+    color:#fbad50;
+}
+
+.fa-facebook {
+    color:#4267B2;
+}
+
+.fa-twitter {
+    color:#1DA1F2;
+}
+
+.fa-youtube-play {
+    color:#FF0000;
+}
+
+.fa-linkedin-square {
+    color:#0e76a8;
+}
+
+#footer3 a {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s linear;
+}
+
+#footer3 a i{
+    text-decoration:none;
+    display:inline-block;
+    background: rgb(140, 100, 190);
+    transition: 0.5s linear;
+    margin-right: 5px;
+    width:30px;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+    font-size: 15px;
+}
+
+#footer3 a:hover {
+    color: rgb(23, 42, 125);
+    text-decoration: none;
+    transition: 0.5s linear;
+}
+
+
+#footer4 a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer4 a:hover {
+    color: rgb(23, 42, 125);
+    text-decoration: none;
+}
+
+
+

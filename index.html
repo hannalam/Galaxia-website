@@ -1,0 +1,182 @@
+<!-- 
+University of London
+Web Development (CM1040)
+
+Project Name: GALAXIA
+Team 77 (Tutor Group 09)
+Members: 
+SAU TING LAM (Slack: Hanna Lam) 
+ALEKSANDRA WYPORKIEWICZ (Slack: Aleksandra Wyporkiewicz)
+ABDULLAH SALEEM (Slack: Abdullah S) 
+YOUNHO KIM (Slack: Lewis Kim)
+YEHUDA TAYLOR (Slack: Yehuda T)
+ABDULLAH ANAZ (Slack: Abdullah Anaz)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- This head section contains all the invisible information about the page -->
+<head>
+  <link rel="shortcut icon" href="img/favicon.ico"/> <!--Original Logo designed -->
+  <title>GALAXIA | Home</title>
+  
+  <meta charset="utf-8">
+  <meta name="description" content="This is a theme park website for a community of people interested in explore the space and planets.">
+  <meta name="author" content="Team 77">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="refresh" content="600">
+  <meta name="keywords" content="Theme park -'SPACE FOR YOU'">
+  
+  <!-- import CSS -->  
+  <link rel="stylesheet" type="text/css" href="StyleSheet/style.css"/>
+
+  <!-- import font -->
+  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+  <!-- import fontawesome -->
+  <script src="https://use.fontawesome.com/2c01877642.js"></script>    
+  <!-- import jQuery -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<!-- This body section contains the structure for all the visble content -->
+<body>
+    <div class="grid-container-index">
+        <!-- Header contains logo -->
+        <header id="logo" class="top-bar">
+            <a href="index.html"><img src="img/logo.png" alt="Galaxia space park logo" width="100%"></a>
+        </header>
+        <!-- Navigation menu in the top bar -->
+        <nav id="menu" class="top-bar">
+            <a href="index.html" class="home">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="restaurants.html">Restaurants</a>
+        </nav>
+        <!-- Icons for cart, search, user login -->
+        <section id="user-icons" class="top-bar">
+            <img src="img/userIcons/cart.png" alt="Book ticket" width="40" height="40" onclick="alert('Cart\nComing Soon')"/>
+            <img src="img/userIcons/search.png" alt="Search" width="40" height="40" onclick="alert('Search\nComing Soon')"/>                
+            <img src="img/userIcons/user.png" alt="Login" width="40" height="40" onclick="alert('Login\nComing Soon')"/>                
+        </section>
+        <!-- Covid alert bar to draw attention-->
+        <div class="alert">
+            <span class="close" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Covid-19 Attention!</strong> Please check the park operation before coming!
+        </div>
+        <!-- Gallery sections ------------>
+        <section id="gallery">
+            <!-- Gallery of 4 small images on the left. With the JavaScript code, we can change photo by clicking the small thumbnail photos. Learned from the course "Responsive Website Basics: Code with HTML, CSS, and JavaScript" from Coursera. Made some modify of the size, images and class. -->
+            <div class="gallery-content">
+                <img class="crop-img" src="img/homepage/space1.jpg" alt="Space 1" />
+                <img class="crop-img" src="img/homepage/space2.jpg" alt="Space 2" />
+                <img class="crop-img" src="img/homepage/space3.jpg" alt="Space 3" />
+                <img class="crop-img" src="img/homepage/space4.jpeg" alt="Space 4" />
+            </div>
+        </section>
+        <!-- Big main picture -->
+        <section id="big-image">
+            <img src="img/homepage/space1.jpg" alt="Space 1"/>
+        </section>
+        <script>
+            //when we click on the thumbnail, we set the src attribute of the big image to be the same as the src of the image we have clicked on(this)
+            $(".crop-img").click(function(){
+                $("#big-image img").attr('src',$(this).attr('src'));
+            });
+        </script>
+        <!-- Content below the gallery pictures - Welcome text  -->
+        <section id="welcome">
+            <h1>Welcome to Galaxia - the Space Theme Park</h1>
+            <p>Indulge yourself in the one and only space adventure, enjoy stay at our hotel and good food in one of our restaurants</p>
+        </section>
+        <!-- Content below the gallery pictures - images and text -->
+        <section id="content-boxes">
+            <!-- First row -->
+            <img class="content-image1" src="img/homepage/space1.jpg" alt="Space 1">
+            <div class="content-description1">
+                <h2>Check out our attractions</h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut mauris sem. Aenean suscipit nisl at nisl dapibus interdum. Quisque sed mollis dolor. Nam neque neque, porttitor quis lacus sit amet, tempus mattis urna. Vestibulum a ornare ante, sed auctor dui. Phasellus quis augue justo. In fermentum ornare tellus, ut ullamcorper ligula imperdiet eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut mauris sem.
+                <div class="actions"><a href="attractions.html" class="read-more">Read more &#8594;</a></div>
+            </div>
+            <!-- Second row -->            
+            <img class="content-image2" src="img/homepage/space1.jpg" alt="Space 1">
+            <div class="content-description2">
+                <h2>Eat at our fabulous Space Restaurant</h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut mauris sem. Aenean suscipit nisl at nisl dapibus interdum. Quisque sed mollis dolor. Nam neque neque, porttitor quis lacus sit amet, tempus mattis urna. Vestibulum a ornare ante, sed auctor dui. Phasellus quis augue justo. In fermentum ornare tellus, ut ullamcorper ligula imperdiet eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut mauris sem.
+                <div class="actions"><a href="restaurants.html" class="read-more">Read More &#8594;</a></div>
+            </div>
+            <!-- Third row -->
+            <img class="content-image3" src="img/homepage/space1.jpg" alt="Space 1">
+            <div class="content-description3">
+                <h2>Check Covid-19 safety regulations</h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut mauris sem. Aenean suscipit nisl at nisl dapibus interdum. Quisque sed mollis dolor. Nam neque neque, porttitor quis lacus sit amet, tempus mattis urna. Vestibulum a ornare ante, sed auctor dui. Phasellus quis augue justo. In fermentum ornare tellus, ut ullamcorper ligula imperdiet eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut mauris sem.
+                <div class="actions"><a href="#" class="read-more">Read more &#8594;</a></div>
+            </div>
+        </section>
+        <!-- Reviews section -->
+        <!-- Reviews header -->
+        <section id="reviews-header">
+            <div>Reviews from our guests</div>    
+        </section>             
+        <section id="reviews">        
+            <!-- Review 1-->
+            <img id="review-image1" src="img/homepage/review.png" alt="five star review">
+            <div id="review-description1">
+                <h3>We had great time in Galaxia!</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut mauris sem. Aenean suscipit nisl at nisl dapibus interdum. Quisque sed mollis dolor. Nam neque neque, porttitor quis lacus sit amet, tempus mattis urna.
+            </div>
+            <!-- Review 2-->
+            <img id="review-image2" src="img/homepage/review.png" alt="five star review">
+            <div id="review-description2">
+                <h3>Definitely will come back</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut mauris sem. Aenean suscipit nisl at nisl dapibus interdum. Quisque sed mollis dolor. Nam neque neque, porttitor quis lacus sit amet, tempus mattis urna.
+            </div>
+            <!-- Review 3-->
+            <img id="review-image3" src="img/homepage/review.png" alt="five star review">
+            <div id="review-description3">
+                <h3>I reccomend this place to everyone</h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut mauris sem. Aenean suscipit nisl at nisl dapibus interdum. Quisque sed mollis dolor. Nam neque neque, porttitor quis lacus sit amet, tempus mattis urna.
+            </div>
+        </section>
+        <!-- Footer: provide more extra information of the park and contact -->
+        <footer id="footer">
+            <!-- First column: logo and social media links -->
+            <div id="footer1">
+                <a href="index.html"><img src="img/logo.png" alt="Galaxia space park logo" width="80%"></a>
+                <div id="social-media">
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>                    
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <!-- Second column: adress and copyrights -->
+            <div id="footer2">
+                <address id="address">
+                    <p>Galaxia Theme Park Ltd</p>
+                    <p>Space Street 11</p>
+                    <p>Fantasy City</p>
+                    <p>Asteria</p>
+                </address>
+                <div class="copyright">© Space Park 2021 Team 77 (Tutor Group 09)</div>
+            </div>
+            <!-- Third column: adress and copyrights -->
+            <div id="footer3">
+                <p>Contact us if you have any questions</p>
+                <p><a href="tel:+180 123 234 568"><i class="fa fa-phone" aria-hidden="true"></i> +180 123 234 568</a></p>
+                <p><a href="mailto:gobeyond@galaxia.com"><i class="fa fa-envelope" aria-hidden="true"></i> gobeyond@galaxia.com</a></p>
+            </div>            
+            <!-- Fourth column: Sitemap -->
+            <nav id="footer4">                
+                <p><a href="index.html">Homepage</a></p>
+                <p><a href="attractions.html">Attractions</a></p>
+                <p><a href="restaurants.html">Restaurants</a></p>
+                <p><a href="#">Tickets and Passes</a></p>                              
+                <p><a href="#">Regulations</a></p>                                            
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
+
